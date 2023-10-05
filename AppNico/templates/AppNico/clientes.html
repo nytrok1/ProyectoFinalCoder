@@ -1,0 +1,21 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+
+
+<form action = "" method="POST">
+        
+    {% csrf_token %}
+    <p>nombre: <input type="text" name = "nombre"> </p>
+    <p>apellido: <input type="text" name = "apellido"></p>
+    <p>documento: <input type="number" name = "documento"></p>
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock %}
+
+
+
+
