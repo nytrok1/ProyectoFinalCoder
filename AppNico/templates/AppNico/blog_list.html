@@ -1,0 +1,29 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Blogs</title>
+</head>
+<body>
+    <h1>Listado de Blogs</h1>
+    <ul>
+        {% for blog in object_list %}
+            <li>
+                <h1>{{ blog.usuario }}</h1>
+                <a href="{% url 'BlogsDetalles' blog.id %}" style="text-decoration: none; padding: 5px 10px; background-color: #333; color: #fff; border: 1px solid #333; border-radius: 5px;">Detalles</a>
+                <a href="{% url 'Edit' blog.id %}" style="text-decoration: none; padding: 5px 10px; background-color: #333; color: #fff; border: 1px solid #333; border-radius: 5px;">Editar</a>
+                <a href="{% url 'Borrar' blog.id %}" style="text-decoration: none; padding: 5px 10px; background-color: #333; color: #fff; border: 1px solid #333; border-radius: 5px;">Borrar</a>
+
+        
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+{% endblock %}
+{% endblock %}

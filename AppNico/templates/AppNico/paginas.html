@@ -1,0 +1,26 @@
+{% extends "AppNico/index.html" %}
+
+{% load static %}
+
+
+{% block section1 %} 
+{% block section2 %} 
+{% if not request.user.is_authenticated %}
+<div class="card mb-4">
+    <div class="card-header">Categorias</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="list-unstyled mb-0">
+                    <h5>Registrate aca para poder usar todas las funciones de TuBlog</h5>
+                    <li><a href="{% url 'Registrar' %}">Registrarse </a></li>
+                    <h5>Si ya tienes cuenta Inicia Sesión</h5>
+                    <li><a href="{% url 'IniciarSesion' %}">Iniciar Sesión</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'BlogNuevo' %}">Agregar Blog Nuevo</a></li>
+                    <li><a href="{% url 'BlogList' %}">Comenta y ve mas detalles de los blogs subidos!</a></li>
+                    
+                            
+
+{% endblock %}
+{% endblock %}

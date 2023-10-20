@@ -1,0 +1,16 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+
+    <form action="" method="POST"> {% csrf_token %}
+        {{mi_form.as_p}}
+
+        <button type="submit" class="btn btn-primary" type="submit"> Actualizar</button>  
+
+        <a type="submit" class="btn btn-primary" href="{% url 'Inicio' %}">Regresar</a>
+    </form>
+{% endblock %}
+{% endblock %}

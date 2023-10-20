@@ -1,0 +1,15 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Actualizar</button>
+    <button href="{% url 'BlogList' %}">Regresar </button>
+</form>
+
+{% endblock %}
+{% endblock %}

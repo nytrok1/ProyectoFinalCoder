@@ -1,0 +1,27 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+<br>
+<br>
+
+<div class="container">
+    <h1 class="text-center">Agregar nuevo Blog</h1>
+<div class="form-group">
+<form style=" width: 50vw; margin-left : 15vw;" method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <div class="container text-center">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a type="submit" class="btn btn-primary" href="{% url 'Inicio' %}">Regresar</a>
+    </div>
+</form>
+</div>
+</div>
+
+<br>
+<br>
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "AppNico/index.html" %}
+
+{% load static %}
+
+
+{% block section1 %} 
+{% block section2 %} 
+
+
+
+<h1>{{ mensaje }}</h1>
+<div class="card mb-4">
+    <div class="card-header">Le damos la bienvenida a TuBlog!</div>
+    <div class="card-body"> Apretando aca te enviaremos a la pagina inicial de TuBlog para que puedas empezar a disfrutar de todo el contenido!! </div>
+    <a type="submit" class="btn btn-primary" href="{% url 'Inicio' %}">Inicio</a>
+</div>
+
+
+{% endblock %}
+{% endblock %}

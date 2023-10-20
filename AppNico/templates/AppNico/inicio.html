@@ -3,19 +3,44 @@
 {% load static %}
 
 
-<div class="btn-group" role="group" aria-label="">
-    <button type="button" class="btn btn-secondary"></button>
-    <button type="button" class="btn btn-secondary"></button>
-    <div class="btn-group" role="group">
-        <button id="dropdownId" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-            
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#"></a>
-            <a class="dropdown-item" href="#"></a>
-        </div>
-    </div>
-</div>
+{% block section1 %} 
+{% block section2 %} 
+<h1>{{mensaje}}</h1>
+{% if not request.user.is_authenticated %}
+<div class="card mb-4">
+    <div class="card-header">Categorias</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="list-unstyled mb-0">
+                    <h5>Registrate aca para poder usar todas las funciones de TuBlog</h5>
+                    <li><a href="{% url 'Registrar' %}">Registrarse </a></li>
+                    <h5>Si ya tienes cuenta Inicia Sesión</h5>
+                    <li><a href="{% url 'IniciarSesion' %}">Iniciar Sesión</a></li>
+                    {% endif %}
+
+                    {% if  request.user.is_authenticated %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página de Inicio</title>
+</head>
+<body>
+    <h1>Blogs Recientes</h1>
+    <ul>
+        {% for blog in blogs %}
+        <h1> El usuario  <i>{{ blog.usuario }}</i> acaba de subir una imagen</h1>
+        <img src="{{ blog.imagen.url }}" alt="{{ blog.titulo }}" width="200">
+        <a href="{% url 'Detalles' %}">Ver más detalles</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endif %}
+{% endblock %}
+{% endblock %}
+
+
+
 
 

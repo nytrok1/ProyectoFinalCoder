@@ -1,0 +1,30 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página de Inicio</title>
+</head>
+<body>
+    <h1>Blogs Recientes</h1>
+    <ul>
+        {% for blog in blogs %}
+        <p>Usuario : <i>{{ blog.usuario }}</i></p>
+        <p>Titulo : {{ blog.titulo }}</p>
+        <p>Descripcion: {{ blog.descripcion }}</p>
+        <p>Fecha de publicacion: {{ blog.fechaPublicacion }}</p>
+        <img src="{{ blog.imagen.url }}" alt="{{ blog.titulo }}" width="100">
+        <a href="{% url 'Inicio' %}">Regresar</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+{% endblock %}
+{% endblock %}

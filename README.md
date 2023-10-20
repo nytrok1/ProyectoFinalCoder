@@ -1,6 +1,10 @@
-Tercera Pre Entrega Giamarco
 
-Cree una pagina con urls para poder cargar a la BD empleados y clientes.
-En la pagina url de Buscar Productos se pueden buscar los productos ya cargados en la base de datos , Asado Pan Milanesas...
-Herede de index a todas las otras paginas , bloqueando contenido !
+NOMBRE Y APELLIDO:
+Nicolás Giamarco
+
+VIDEO DE YOUTUBE EXPLICANDO TuBlog:
+https://www.youtube.com/watch?v=VvEw15ZVoNU
+
+PRUEBAS REALIZADAS:
+Ver archivo titulado "Nicolás Giamarco Pruebas Proyecto Python.xlsx" el cual se encuentra en el presente repositorio 
 

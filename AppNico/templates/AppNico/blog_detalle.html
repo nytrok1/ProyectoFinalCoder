@@ -1,0 +1,48 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}  
+{% block section2 %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Blog</title>
+</head>
+<body>
+    <p>Usuario : <i>{{ blog.usuario }}</i></p>
+    <p>{{ blog.titulo }}</p>
+    <p>{{ blog.descripcion }}</p>
+    <p>{{ blog.fechaPublicacion }}</p>
+    <img src="{{ blog.imagen.url }}" alt="{{ blog.titulo }}" width="100">
+    
+</body>
+</html>
+
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not blog.comentarios.all %}
+        No han comentado este instrumento
+    {% else %}
+        {% for comentario in blog.comentarios.all %}
+        <p><strong>{{comentario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    </div>
+    <a href="{% url 'Comentario' blog.pk %}">Agrega un Comentario</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'BlogList' %}">Regresar</a>
+    
+</div>
+<br>
+
+{% endblock %}
+{% endblock %}

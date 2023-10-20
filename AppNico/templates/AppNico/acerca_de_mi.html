@@ -1,0 +1,27 @@
+{% extends "AppNico/index.html" %}
+{% load static %}
+
+{% block section1 %}
+{% block section2 %}
+{% block section3 %}
+
+<div class="container">
+    <div class="row">
+        <!-- Blog entries-->
+        <div class="col-lg-8">
+            <!-- Featured blog post-->
+            <div class="card mb-4">
+                <a href="{% static 'AppNico/style.css' %}"><img class="card-img-top" src="{% static 'AppNico/assets/nico.jfif' %}" alt="" /></a>
+                <div class="card-body">
+                    <div class="small text-muted">Octubre 15 , 2023</div>
+                    <h2 class="card-title">Cree TuBlog</h2>
+                    <div class="small text-muted">Va queriendo</div>
+                    <p class="card-text">Hola como andan? Me llamo Nicolás tengo 26 años y soy el creador de TuBlog, les cuento un poco sobre mi... Mis hobbies son jugar al futbol ,los jueguitos (cs2,lol) y estoy empezando a fascinarme con la programacion!</p>
+                    <a class="btn btn-primary" href="{% url 'LeerMas' %}">Leer más →</a>
+                    
+                </div>
+            </div>
+
+{% endblock %}
+{% endblock %}
+{% endblock %}
